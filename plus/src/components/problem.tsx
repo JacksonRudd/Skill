@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+import './problem.css'
 function Problem({
   a,
   b,
@@ -20,11 +20,16 @@ function Problem({
   }
 
   return (
-    <div>
-      <h1>
+    <div className="problem">
+      <p className="problem-title">
         {a} + {b}
-      </h1>
-      <input type="text" value={inputValue} onChange={handleChange} />
+      </p>
+      <input
+        className="problem-input"
+        type="text"
+        value={inputValue}
+        onChange={handleChange}
+      />
     </div>
   )
 }
