@@ -35,7 +35,11 @@ function Problem({
         return '9'
 
       default:
-        return letter
+        if (/^\d$/.test(letter)) {
+          return letter
+        } else {
+          return ''
+        }
     }
   }
 
@@ -43,6 +47,9 @@ function Problem({
     let inputValue = e.target.value
     const lastChar = inputValue[inputValue.length - 1]
     if (lastChar == 'h') {
+      if (inputValue.length < 1) {
+        return
+      }
       inputValue = inputValue.slice(0, -2)
     }
     const mappedValue = inputValue
