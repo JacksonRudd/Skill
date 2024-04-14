@@ -2,9 +2,24 @@
   width: 100%;
   height: 100vh; /* Full height of the viewport */
   font-family: 'Roboto';
+  animation: fadeIn 1s ease-in-out;
   display: flex;
   flex-direction: column;
   align-items: center; /* Horizontally center the content */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s;
 }
 
 .problem-title {
@@ -25,4 +40,9 @@
   display: flex; /* Utilizes flexbox to center content */
   align-items: center; /* Centers content vertically */
   justify-content: center; /* Centers content horizontally */
+  /* Add the following code to select the input when the page loads */
+  user-select: all;
+  -moz-user-select: all;
+  -webkit-user-select: all;
+  -ms-user-select: all;
 }

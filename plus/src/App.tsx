@@ -3,12 +3,13 @@ import './App.css'
 import Problem from './components/problem'
 
 function App() {
-  const [a, setA] = useState(4)
-  const [b, setB] = useState(5)
-
+  const [a, setA] = useState(1)
+  const [b, setB] = useState(1)
+  const [max, setMax] = useState(1)
   function correct() {
-    setA(Math.floor(Math.random() * 100) + 1)
-    setB(Math.floor(Math.random() * 100) + 1)
+    setMax(max + 1)
+    setA(Math.floor(Math.random() * max) + 1)
+    setB(Math.floor(Math.random() * max) + 1)
   }
 
   return <Problem a={a} b={b} onAnswerCorrect={correct} />
