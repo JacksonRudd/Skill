@@ -1,9 +1,49 @@
 body {
   background-color: #191324;
-
   color: #007bff;
 }
 
 input {
   color: #007bff;
+}
+
+/* General styles for the navigation container */
+nav {
+  background-color: #333; /* Dark background for the nav bar */
+  text-align: right; /* Center-align the items */
+  padding: 10px 0; /* Padding around the nav for better spacing */
+}
+
+/* Style for the list to remove default list styling */
+nav ul {
+  list-style-type: none; /* Removes bullet points */
+  padding: 0; /* Removes padding */
+  margin: 0; /* Removes margin */
+}
+
+/* Style for each list item */
+nav li {
+  display: inline-block; /* Display items in a row */
+  margin-right: 20px; /* Space between menu items */
+}
+
+/* Last item shouldn't have a right margin */
+nav li:last-child {
+  margin-right: 0;
+}
+
+/* Styles for links */
+nav a {
+  text-decoration: none; /* Removes underline from links */
+  color: white; /* Sets text color to white for contrast */
+  font-size: 16px; /* Set font size */
+  font-family: Arial, sans-serif; /* Set a clean, sans-serif font */
+  padding: 8px 15px; /* Padding for clickable area */
+}
+
+/* Hover effect for links */
+nav a:hover {
+  background-color: #555; /* Darker background on hover */
+  color: #fff; /* Maintain white color for contrast */
+  border-radius: 5px; /* Optional: rounded corners on hover */
 }
