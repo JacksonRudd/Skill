@@ -32,7 +32,7 @@ function App() {
         </ul>
       </nav>
       {page === 'history' && <History />}
-      {page === 'game' && <Game />}
+      {page === 'game' && <Game gameId={new Date().toLocaleString()} />}
       {page === 'about' && <About />}
     </>
   )

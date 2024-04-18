@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import Problem from './problem'
+import { saveScore } from '../backend/storage'
+import Score from '../model/score'
 
-function Game() {
+function Game({ gameId }: { gameId: string }) {
   const targetTime = 2
   const [a, setA] = useState(1)
   const [b, setB] = useState(1)
@@ -15,7 +17,10 @@ function Game() {
     const timeSinceLastCall = Math.floor((currentTime - lastCalledTime) / 1000)
     setLastCalledTime(currentTime)
     setScore(Math.max(score + Math.max(targetTime - timeSinceLastCall, -2), 0))
-    setMax(Math.max(score, max))
+    if (score > max) {
+      setMax(score)
+      saveScore(new Score('addition', new Date(), score, gameId))
+    }
     function dice_with_n_sides(n: number) {
       return Math.floor(Math.random() * n) + 1
     }
