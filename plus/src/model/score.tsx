@@ -1,4 +1,6 @@
-class Score {
+import { TimeSeriesDatapoint } from './TimeSeriesDatapoint'
+
+class Score implements TimeSeriesDatapoint {
   game_type: string
   time: Date
   score: number
@@ -8,6 +10,14 @@ class Score {
     this.time = time
     this.score = score
     this.game_id = game_id
+  }
+
+  getValue() {
+    return this.score
+  }
+
+  getTime() {
+    return this.time
   }
 
   static fromJson(json: any): Score {

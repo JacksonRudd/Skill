@@ -10,11 +10,11 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js'
-import { Line } from 'react-chartjs-2'
+import { Line, Scatter } from 'react-chartjs-2'
 import 'chart.js/auto'
 import 'chartjs-adapter-date-fns'
-import { loadScores } from '../backend/storage'
-import Score from '../model/score'
+
+import { TimeSeriesDatapoint } from '../model/TimeSeriesDatapoint'
 
 // Register the TimeScale along with the other components
 ChartJS.register(
@@ -39,23 +39,31 @@ export const options = {
   },
 }
 
-function ProgressGraph() {
-  const scores: Score[] = loadScores()
-  const labels: string[] = scores.map((x) => x.time.toISOString()) // Convert dates to string format
+function ProgressGraph({
+  series,
+  title,
+}: {
+  series: TimeSeriesDatapoint[]
+  title: string
+}) {
+  const labels: string[] = series.map((x) => x.getTime().toISOString()) // Convert dates to string format
 
   const data = {
     labels, // Use labels for dates
     datasets: [
       {
-        label: 'Dataset 1',
-        data: scores.map((x) => ({ x: x.time.toISOString(), y: x.score })),
+        label: title,
+        data: series.map((x) => ({
+          x: x.getTime().toISOString(),
+          y: x.getValue(),
+        })),
         borderColor: 'rgb(255, 99, 132)',
         backgroundColor: 'rgba(255, 99, 132, 0.5)',
       },
     ],
   }
 
-  return <Line options={options} data={data} />
+  return <Scatter options={options} data={data} />
 }
 
 export default ProgressGraph

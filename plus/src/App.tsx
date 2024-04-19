@@ -5,9 +5,11 @@ import History from './components/history'
 import About from './components/about'
 import { ProblemType } from './components/problem'
 function App() {
-  const [page, setPage] = useState<'history' | 'about' | 'game'>('history')
+  const [page, setPage] = useState<'history' | 'about' | 'game' | 'none'>(
+    'none',
+  )
 
-  const handlePageChange = (newPage: 'history' | 'about' | 'game') => {
+  const handlePageChange = (newPage: 'history' | 'about' | 'game' | 'none') => {
     setPage(newPage)
   }
 

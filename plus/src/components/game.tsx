@@ -31,7 +31,7 @@ function Game({
     setScore(Math.max(score + Math.max(targetTime - timeSinceLastCall, -2), 0))
     if (score > max) {
       setMax(score)
-      saveScore(new Score('addition', new Date(), score, gameId))
+      saveScore(new Score('plus', new Date(), score, gameId))
     }
     function dice_with_n_sides(n: number) {
       return Math.floor(Math.random() * n) + 1
