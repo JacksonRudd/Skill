@@ -3,6 +3,7 @@ import './App.css'
 import Game from './components/game'
 import History from './components/history'
 import About from './components/about'
+import { ProblemType } from './components/problem'
 function App() {
   const [page, setPage] = useState<'history' | 'about' | 'game'>('history')
 
@@ -32,7 +33,12 @@ function App() {
         </ul>
       </nav>
       {page === 'history' && <History />}
-      {page === 'game' && <Game gameId={new Date().toLocaleString()} />}
+      {page === 'game' && (
+        <Game
+          gameId={new Date().toLocaleString()}
+          allowed_operations={[ProblemType.Plus, ProblemType.Minus]}
+        />
+      )}
       {page === 'about' && <About />}
     </>
   )
