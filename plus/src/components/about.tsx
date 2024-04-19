@@ -4,7 +4,7 @@ function About() {
       style={{
         maxWidth: '600px',
         margin: '20px auto', // Added margin
-        fontFamily: 'Roboto, Arial, sans-serif',
+        fontFamily: 'arial, Arial, sans-serif',
       }}
     >
       <h1>Welcome to Zen Of Calculation!</h1>
