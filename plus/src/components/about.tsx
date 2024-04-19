@@ -1,10 +1,10 @@
 function About() {
   return (
     <div style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto' }}>
-      <h1>Welcome to Plus!</h1>
+      <h1>Welcome to Zen Of Calculation!</h1>
       <p>
-        ZenOfCalc is designed to transform mastering mental arithmatic into a
-        soothing and enjoyable experience.
+        Zen Of Calculation is a minimalistic game designed to transform
+        mastering mental arithmatic into a soothing and enjoyable experience.
       </p>
 
       <h2>How to Input Answers</h2>
