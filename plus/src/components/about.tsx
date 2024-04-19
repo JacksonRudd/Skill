@@ -1,10 +1,16 @@
 function About() {
   return (
-    <div style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto' }}>
+    <div
+      style={{
+        maxWidth: '600px',
+        margin: '0',
+        fontFamily: 'Roboto, Arial, sans-serif',
+      }}
+    >
       <h1>Welcome to Zen Of Calculation!</h1>
       <p>
         Zen Of Calculation is a minimalistic game designed to transform
-        mastering mental arithmatic into a soothing and enjoyable experience.
+        mastering mental arithmetic into a soothing and enjoyable experience.
       </p>
 
       <h2>How to Input Answers</h2>
