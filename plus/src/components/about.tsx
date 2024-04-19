@@ -3,7 +3,7 @@ function About() {
     <div
       style={{
         maxWidth: '600px',
-        margin: '0',
+        margin: '20px auto', // Added margin
         fontFamily: 'Roboto, Arial, sans-serif',
       }}
     >
