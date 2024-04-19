@@ -1,4 +1,3 @@
-import React from 'react'
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -10,7 +9,7 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js'
-import { Line, Scatter } from 'react-chartjs-2'
+import { Scatter } from 'react-chartjs-2'
 import 'chart.js/auto'
 import 'chartjs-adapter-date-fns'
 
