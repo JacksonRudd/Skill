@@ -3,8 +3,8 @@ function About() {
     <div style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto' }}>
       <h1>Welcome to Plus!</h1>
       <p>
-        Zenofcal is designed to transform learning addition into a soothing and
-        enjoyable experience.
+        ZenOfCalc is designed to transform mastering mental arithmatic into a
+        soothing and enjoyable experience.
       </p>
 
       <h2>How to Input Answers</h2>
